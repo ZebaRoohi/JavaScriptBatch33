@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+  //Primitive DT:
+        //Number DT
+        let a=-10;
+        console.log('Value of a is',a, 'Typeof a is:',typeof(a)) 
+        
+        let b=21.5;
+        console.log('Value of b is',b,'Type of b is',typeof(b));
+
+        let c=NaN;
+        console.log('Value of c is',c,'Type of c is',typeof(c));
+
+        //Strings-set of characters
+
+        let str='Hello Wold';
+        console.log('Value of str is',str,'Type of str is',typeof(str))
+
+        let str1='10';
+        console.log('Value of str is',str1,'Type of str is',typeof(str1))
+
+        let str2=" ";
+        console.log('Value of str is',str2,'Type of str is',typeof(str2))
+
+        //Boolean DT-true,false
+        let boola=true
+        console.log('Value of boola is',boola,'type of boola is',typeof(boola))
+
+        let boolb=false
+        console.log('Value of boolb is',boolb,'type of boolb is',typeof(boolb))
+
+        //true-1 false-0
+        console.log(true+true)
+        console.log(true+false)
+        console.log(true*false)
+        console.log(true*true)
+        console.log(false-true)
+        console.log(true+true-false*true+true-false)
+
+        //Null DT-null value (empty)
+        let nullValue=null;
+        console.log('Value of null is',nullValue,'Type of null value is',typeof(nullValue))
+
+        //Undefined DT-which is not define
+        let Undefined;
+        console.log('Value of undefined is',Undefined,'Type of Undefiend is',typeof(Undefined))
+
+        //Symbol DT-it is a unique identifier
+        let sym=Symbol('unique')
+        console.log('Value of Symbol is',sym,'Type of Symbol is',typeof(sym))
+
+//Non-Primitive DT: Non-primitive data types are more complex and can hold multiple values 
+        //Object
+        let person={
+            name:'John',
+            age:23,
+            isStudent:true
+        }
+        console.log('Value of Person is',person,'Type of Person is',typeof(person)) //person is a reference variable
+        console.log(person.name,person.isStudent)//Reference
+
+        //Array
+        let color=['red','blue','green']
+        console.log('Values of colrs',color,'Type of colors',typeof(color))
+
+        //Date
+        let today_date=new Date();
+        console.log('Value of date',today_date,'type of date is',typeof(today_date))
+    
+    </script>
+<body>
+    <h3>Data Types</h3>
+    <p>There are two types of data types. 1.Primitive and Non primitive</p>
+    <p>Primitive data types:Numbers,String,Boolean,Null,Undefined and Symbol</p>
+</body>
+</html>

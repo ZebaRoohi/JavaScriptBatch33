@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+//Variable Var
+    var a=10;
+    console.log('The value of a is',a)
+
+    a=30;
+    console.log('Variable reassign value is',a)
+
+    var a=20; //Can reuse it mutiple time of variable called redclartion and assigning value in it reassigning
+    console.log('The new value of a is ',a)
+// let variable
+    let b=5;
+    console.log('Value of let b is ',b);
+
+    b=10;
+    console.log('Reassign let is',b)
+
+    // let b=10;
+    // console.log('Value of new let b is',b) //throws error as it is not allowing redclaration of variable name
+
+    //Block scope
+    {
+        let c=12;
+        console.log('Value of block c is ',c)
+    }
+    // console.log('Outsid of block c is',c);//ReferenceError
+
+//const variable
+    const x=100;
+    console.log('Value of const x is',x);
+
+    // x=120;
+    // console.log('Value after reassign is',x) //cannot reasign value
+
+    // const x=130;
+    // console.log('Value after redclartion is',x)//cannot redclare agaib
+//Block scope
+    {
+        const z=50;
+        console.log('Value of z inside scope',z)
+    }
+    // console.log('Value of z outside scope',z) //ReferenceError
+
+</script>
+<body>
+    <h2>Example of Variables in Javascript</h2>
+
+</body>
+</html>
