@@ -97,7 +97,68 @@
     else{
         console.log('It is scalene')
     }*/
+//Ternary Operator-concise way of writing the code
+    /*let a=10;
+    let b=(a>20)?'Greater':'Lesser';
+    console.log('The number',b)
+    //template literals (ecma script) 
+    console.log(`The number is ${b}`)
 
+    let age=14;
+    let vote=(age>18)?'You can vote':'You cannot vote'
+    console.log(`Person can ${vote}`)
+    
+    //taking input from user
+    let x=parseInt(prompt('Enter your age:'))
+    let y=(x>18)?'you can vote':'you cannot'
+    console.log(y)
+
+    //print your name with ternary operator
+    let name=prompt('Enter your name').toLowerCase()
+    let display_name=(name=='zeba')?'You are correct':'You guess is wrong'
+    console.log(`Your name is ${display_name}`)
+
+    //checking the data type
+    let value='hdjgh';
+    let type=(typeof value==='number')?'Number DT':'Not a numberdt'
+    console.log(`Data type is ${type}`)*/
+
+//switch case
+    /*let day=prompt("Enter a day");
+    let message;
+    switch(day){
+        case "Monday":
+            message='This is the first day of the week'
+        break;
+        case "Tuesday":
+            message='Second of week';
+            break;
+        case "Wednesday":
+            message='Third day of week';
+            break;
+        case "Saturday":
+            message="Its a weekend"
+            break;
+        default:
+            message="Its regular day"
+    }
+    console.log(`${message}`)*/
+//multiple case adding
+    let fruits="grapes"
+    let color;
+    switch(fruits){
+        case "apple":
+        case "cherry":
+            color="red";
+        break;
+        case "mango":
+            case "banana":
+                color="yellow";
+            break;
+            default:
+                color='No color'
+    }
+    console.log(`${color}`)
 </script>
 <body>
     <h3>Example of Condition and decision making operators</h3>
