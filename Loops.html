@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+// for loop for printing 1-10
+    for(let i=1;i<=10;i++){
+        console.log(i)
+    }
+    //even number
+    for(let i=0;i<=10;i+=2){
+        console.log("even numbers are",i)
+    }
+    //taking input from users
+    // let num=parseInt(prompt("Enter the number"))
+    // for(let i=0;i<=num;i++){
+    //     console.log(i)
+    // }
+
+    //print odd numbers
+    for(let i=1;i<=10;i+=2)
+    console.log(i)
+    
+    //print in reverse direction
+    for(let i=10;i>=0;i--){
+        console.log('Reverse',i)
+    }
+    
+    //printing multiplication table
+   /* let num=4;
+    for(let i=1;i<=10;i++){
+        let result=num*i;
+        console.log(num +"x"+i+"=",result)
+    }
+   
+   //taking input from user
+   let number=parseInt(prompt('Enter the number'))
+   if(isNaN(number)){
+    alert('Please enter the valid number')
+   }
+   else{
+   for(let i=1;i<=10;i++){
+    let result=number*i;
+    console.log(number +"x"+i+"=",result)
+   }
+}*/
+//For/In- loops through the properties of an object
+   /* let person={
+        name:'John',
+        age:23,
+        address:'Telengana'
+    }
+    for(let key in person){
+        console.log(key,':',person[key])
+    }
+
+    let colors=['red','orange','green']
+    for(let key in colors){
+        console.log(key,":",colors[key])
+    }*/
+ //For/of-oops through the values of an iterable object
+    let fruits=['grapes','apple','banana']
+    for(let key of fruits){
+        console.log(key)
+    }
+
+    let name='John'
+    for(let char of name){
+        console.log(char)
+    }
+    </script>
+<body>
+    <h3>Loops</h3>
+    <p>For loop</p>
+</body>
+</html>

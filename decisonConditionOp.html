@@ -144,7 +144,7 @@
     }
     console.log(`${message}`)*/
 //multiple case adding
-    let fruits="grapes"
+    /*let fruits="grapes"
     let color;
     switch(fruits){
         case "apple":
@@ -158,7 +158,36 @@
             default:
                 color='No color'
     }
-    console.log(`${color}`)
+    console.log(`${color}`)*/
+//grade
+    let percentage=parseFloat(prompt('Enter the percentage'))
+    let grade;
+    // if(percentage>=90){
+    //     grade="A"
+    // }
+    // else if(percentage>=80){
+    //     grade="B"
+    // }else if(percentage>=70){
+    //     grade="C"
+    // }
+    // else{
+    //     grade="Fail"
+    // }
+    switch(true){
+        case (percentage>=90):
+           // console.log('Your score is distinction')
+           grade='A'
+           console.log(grade)
+            break;
+        case (percentage>=80):
+            console.log('You grade is B')
+            break;
+        case (percentage>=70):
+            console.log('Your grade is C')
+            break;
+        default:
+            console.log('You fail')
+    }
 </script>
 <body>
     <h3>Example of Condition and decision making operators</h3>
