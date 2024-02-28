@@ -21,13 +21,13 @@
     // }
 
     //print odd numbers
-    for(let i=1;i<=10;i+=2)
-    console.log(i)
+    // for(let i=1;i<=10;i+=2)
+    // console.log(i)
     
-    //print in reverse direction
-    for(let i=10;i>=0;i--){
-        console.log('Reverse',i)
-    }
+    // //print in reverse direction
+    // for(let i=10;i>=0;i--){
+    //     console.log('Reverse',i)
+    // }
     
     //printing multiplication table
    /* let num=4;
@@ -62,7 +62,7 @@
         console.log(key,":",colors[key])
     }*/
  //For/of-oops through the values of an iterable object
-    let fruits=['grapes','apple','banana']
+    /*let fruits=['grapes','apple','banana']
     for(let key of fruits){
         console.log(key)
     }
@@ -70,7 +70,73 @@
     let name='John'
     for(let char of name){
         console.log(char)
+    }*/
+
+//While Loop:In JavaScript, a while loop is a control flow statement that allows you to repeatedly execute a block of code as long as a specified condition is true.
+  /*      let i=0; //initializing
+        while(i<=5){
+            console.log('The value of i is',i);
+            i++
+        }
+
+        let x=4;
+        let y=1
+        while(y<=10){
+            console.log('Multiplication table is',x*y)
+            y++
+        }
+
+        let num=1;
+        while(num<10){
+            console.log(num);
+            if(num===5){
+                console.log('number break at 5')
+            break;
+        }
+      num++
+  }
+   
+  //Random numbe with while loop
+    let randomNumber;
+    while(randomNumber!==7){
+        randomNumber=Math.floor(Math.random()*5);
+        console.log(randomNumber)
     }
+    //print even numbers with while loop
+    let i=0;
+    while(i<=10){
+        console.log('Value of even numbers',i)
+        i+=2
+    }
+
+    //print the number with in the range of 10 which should be divisible by 7 and 9
+    let number=10;
+
+    while(number<=100){
+        if(number%7==0 && number%9==0){
+            console.log(number)
+        }
+        number++;
+    }
+*/
+    //Do-While loop:is a control flow statement that repeatedly executes a block of code as long as a specified condition evaluates to true.
+        let i=0;
+        do{
+            console.log('Numbers are',i);
+            i++;
+        }while(i<=5)
+
+        //multiplication table
+            // let num=5;
+            // let z=1;
+            // do{
+            //     console.log('Multiplication table of 5 is',num*z)
+            //     z++;
+
+            // }while(num<=10)
+      
+
+
     </script>
 <body>
     <h3>Loops</h3>

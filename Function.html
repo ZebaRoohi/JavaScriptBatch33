@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function hello() //function declaration
+        {
+            console.log('Hello from function')
+        }
+    //calling function/fn execution
+    hello()
+//Function parameters and arguments
+        function greet(name,age) //parameters
+        {
+            console.log('Hello ' +name +' Your age is' +age)
+        }
+        greet('John',12)//arguments
+//function return
+        function add(a,b)//parameters
+        {
+            return a+b
+        }
+       //calling fn
+       let result=add(2,3)
+        console.log(result)
+     //even numbers
+        function isEven(number){
+            return number%2==0
+        }
+        let even_result=isEven(6)
+        console.log(even_result)
+    //area of rectangle=length*breadth
+        function areaRectangle(length,breadth){
+            return length*breadth
+        }
+        let result_rec=areaRectangle(4,7)
+        console.log(result_rec)
+    //area of cirlce=pi*r*r
+        function areaCircle(radius){
+            return Math.PI*radius*radius
+        }
+        let resul_circle=areaCircle(4)
+        console.log(resul_circle)
+    //reverse of string-hello world-split().reverse().join()
+        function reverseString(input){
+           return input.split('').reverse().join('') 
+        }   
+        let reverse=reverseString('Hello,World')
+        console.log(reverse)   
+    //Default parameters
+        function sub(a=1,b=5){
+            return a-b
+        }
+        let sub_result=sub()
+        console.log(sub_result)
+      //string 
+        function greeting(age,name='John'){
+            return 'Hello'+name+'age:'+age
+        }
+        let greeting_result=greeting(12)
+        console.log(greeting_result)
+      //find out exponent of number
+      function power(exponent,base=2)
+      {
+        //return base**exponent
+        return Math.pow(base,exponent)
+      }
+      let power_result=power(3)
+      console.log(power_result)
+        
+</script>
+<body>
+    <h3>Function,execution,declaration</h3>
+    <p>reusable code to perform a set of actions. Functions simplify the coding process, prevent redundant logic, and make code easier to follow.</p>
+    <p>Declartion,definitation,statement is the function declarations</p>
+    <hr>
+    <h3>Parameters and Arguments</h3>
+    <p>Function parameter is a variable listed in the parentheses of a function declaration, and an argument is the actual value or expression passed to the function when it is called. </p>
+</body>
+</html>

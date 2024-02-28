@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    const greet=()=>console.log('Hello from Arrow function')
+    greet()
+//with parameters
+    const add=(x,y)=>console.log(x+y);
+    add(2,3)
+
+     //square root of number
+     const square=(num)=>console.log(num*num)
+     square(4)
+
+     //joining the string
+     const concateString=(str1,str2)=>console.log(str1+' '+str2)
+     concateString('Hello','World')
+//Default parameters
+    const areaRect=(length,breadth=5)=>console.log(length*breadth)
+    areaRect(4)
+    //pass default name and print good morining with name
+    const showName=(name)=>{
+        console.log('Your name is '+name)
+    }
+    showName('Deepak')
+//Anonymous function
+    var addAno=function(x,y){
+        return(x+y)
+    }
+    console.log(addAno(3,7))
+
+    var greetAno=function(){
+        console.log('Hello from anonymous fucntion')
+    }
+    greetAno()
+//closure 
+    function outerfn(){
+    let outervar='This is outer variable';
+    function innerfn(){
+        console.log(outervar) //lexical scoping
+    }
+    innerfn()
+    }
+    outerfn()
+ 
+</script>
+<body>
+    <h3>Example of Functions</h3>
+    <p>Arrow function:consise way of writing the function</p>
+    <p>Anonymous function:An anonymous function in JavaScript is a function without a name.</p>
+    <p>A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function.</p>
+</body>
+</html>
