@@ -46,6 +46,29 @@
     innerfn()
     }
     outerfn()
+
+    function counter(){
+    let count=0;
+    function increment(){
+        count++;
+        console.log('Counter value is',count)
+    }
+    increment()
+    }
+    counter()
+//Pure function
+    function square_pure(x){
+        return x*x
+    }
+    console.log(square_pure(4))
+    console.log(square_pure(4))
+
+    function pure_string(stra,strb){
+        return stra+' '+strb;
+    }
+    console.log(pure_string('Hello','World'))
+    console.log(pure_string('Hello','World'))
+    console.log(pure_string('Hello','World'))//Always return same output
  
 </script>
 <body>
@@ -53,5 +76,6 @@
     <p>Arrow function:consise way of writing the function</p>
     <p>Anonymous function:An anonymous function in JavaScript is a function without a name.</p>
     <p>A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function.</p>
+    <p>In JavaScript, a pure function is a function that, given the same input, will always return the same output and has no side effects.(does not modify the state)</p>
 </body>
 </html>

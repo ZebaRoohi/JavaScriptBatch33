@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // function first(){//3
+    //     return "first"
+    // }
+    // function second(){
+    //     first()+"second"//2
+    // }
+    // second()//top
+
+    // function outercallstack(){
+    //     console.log('outer callstack')
+    //     innercallstack()
+    // }
+    // function innercallstack(){
+    //     console.log('inner callstack')
+    // }
+    // outercallstack()
+//Recursive fucntion
+        function recursivefn(action){
+            console.log(`Iam ${action}`)
+            recursivefn(action)
+        }
+        recursivefn('Recursive function')
+        
+        //recursive number
+      function recursivenum(n){
+        if(n==0){
+            console.log('Task completed')
+            return
+        }
+        console.log('Number is',n)
+        recursivenum(n-1)
+
+      }
+      recursivenum(10)
+</script>
+<body>
+    <h3>Example of Callstack and recursive</h3>
+    <p>It keeps track of functions that are currently being executed and the order in which they were called. When a function is called, it is added to the top of the call stack, and when a function is completed, it is removed from the stack.</p>
+
+    <p>A recursive function is a function that calls itself during its execution.Each recursive call processes a smaller instance of the problem until a base case is reached, at which point the function stops calling itself and returns a result.</p>
+</body>
+</html>
