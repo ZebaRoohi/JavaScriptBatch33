@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let fixed=76.5675756;
+    console.log(fixed.toFixed(4))
+
+//precision
+    let precision=123.456866
+    console.log(precision.toPrecision(6))
+
+//tostring
+    let num=12
+    let result=num.toString()
+    console.log(result,typeof result)
+//parseInt
+    let a='23'
+    let parse=parseInt(a)
+    console.log(parse,typeof parse)
+
+    //parseFloat
+    let b='34.56'
+    let float=parseFloat(b)
+    console.log(float,typeof float)
+  
+//NaN
+    let c=NaN
+    console.log(isNaN(c))
+//Finite
+    let finite=7978
+    console.log(isFinite(finite))
+
+//Integer
+    console.log(Number.isInteger(10.797))
+    console.log(Number.isInteger(-10))
+
+</script>
+<body>
+    <h3>Example of Number methods</h3>
+    <p>ToFixed: rounding the number to a specified number of decimals.</p>
+    <p>toPrecision(): Formats a number to a specified length.</p>
+    <p>toString(): Converts a number to a string.</p>
+    <p>parseInt(): Parses a string and returns an integer.</p>
+    <p>parseFloat(): Parses a string and returns a floating point number.</p>
+    <p>isNaN(): Checks whether a value is NaN (Not a Number).</p>
+    <p>isFinite(): Checks whether a value is finite.</p>
+    <p>Number.isInteger(): Checks whether a value is an integer.</p>
+</body>
+</html>
