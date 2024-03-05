@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //array constructor or literal
+        let arr=[1,2,3,4,5]
+        let arr_const=new Array(1,2,4,5,5)
+        console.log(arr,arr_const)
+    //Accessing array
+        let arr_acc=['banana','kiwi','apple','mango',45,-56,-90.6879]
+        console.log(arr_acc[1])  
+        console.log(arr_acc[3])  
+        console.log(arr_acc[5])
+    //length    
+        arr_length=['banana','kiwi','apple','mango',45,-56,-90.6879]
+        console.log(arr_length.length)
+
+    //Adding elements
+    //push
+        let arr_push=['banana','mango']
+        arr_push.push('kiwi')
+        console.log(arr_push)
+    //unshift
+        let unshift_arr=['banana','mango']
+        unshift_arr.unshift('orange','kiwi')
+        console.log(unshift_arr)
+    //Removing Elements
+    //pop
+        let pop_arr=['banana','kiwi','mango','apple']
+        pop_arr.pop()
+        console.log(pop_arr)
+    //shift
+    let shift_arr=['banana','kiwi','mango','apple']
+    shift_arr.shift()
+    console.log(shift_arr)
+
+    //concat
+        let concat_1=['red','blue','green']
+        let concat_2=[1,3,4,56]
+        let concat_arr=concat_1.concat(concat_2)
+        console.log(concat_arr)
+    //toString
+        let str=[1,2,4,5,6]
+        str.toString()
+        console.log(str)
+
+    //sort
+        sort_arr=['red','blue','green','orange']
+        sort_arr.sort()
+        console.log(sort_arr)
+
+        sort_num=[90,-56,78,32,12,10,0]
+        sort_num.sort()
+        console.log(sort_num)
+
+        sortnum=[123,78,0,1,56,5,19]
+       sortnum.sort((a,b)=>a-b)
+        console.log(sortnum)
+    </script>
+<body>
+    <h3>Array Methods</h3>
+    <p>Array Literal or array constructor method</p>
+    <p>Adding Elements:push: Adds one or more elements to the end of an array.
+        unshift: Adds one or more elements to the beginning of an array.</p>
+    <p> Removing Elements:
+        pop: Removes the last element from an array.
+        shift: Removes the first element from an array.</p>
+    <p>The concat method creates a new array by combining multiple arrays or values.</p>
+    <p>The sort() method sorts an array alphabetically.</p>
+</body>
+</html>

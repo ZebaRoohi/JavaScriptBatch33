@@ -36,6 +36,31 @@
         console.log(str.substring(6,11))
         console.log(str.substring(8,12))
         console.log(str.substring(3,6))
+    //searching a string
+        let search_str='Hello, World!'
+        console.log(search_str.indexOf('l'))
+    
+    //replace
+        let replace_str='Hello,World'
+        console.log(replace_str.replace('World','Universe'))
+    //changing the case
+        let upp_str='hello,world'
+        console.log(upp_str.toUpperCase())
+
+        let low_str='HELLO,WOrld'
+        console.log(low_str.toLowerCase())
+    //trim 
+        let trim_str='    Hello, World    '
+        console.log(trim_str.trim())
+    //string conversion
+        let str_conv=32
+        console.log(str_conv,typeof str_conv)
+        let str3=str_conv.toString()
+        console.log(str3,typeof str3)
+    //Negative Indices
+        let neg_str='Hello world'
+        console.log(neg_str.slice(-5,-2))
+        console.log(neg_str.slice(-11,-4))
 </script>
 <body>
     <h3>String Methods</h3>
@@ -43,5 +68,12 @@
     <p>Length:The length property gives the length of the string.</p>
     <p>Accessing Characters:Individual characters can be accessed using square brackets and zero-based indexing.</p>
     <p>The substring method extracts a portion of a string.</p>
+    <p>The indexOf method searches for a substring and returns the index of the first occurrence</p>
+    <p>The replace method replaces a specified substring with another.</p>
+    <p>The toUpperCase and toLowerCase methods change the case of the string.</p>
+    <p>The trim method removes leading and trailing whitespaces from a string.</p>
+    <p>String Conversion:
+        You can convert values to strings using the String constructor or the toString method.</p>
+        <p>Negative indices can be used to count from the end of the string</p>
 </body>
 </html>
