@@ -58,8 +58,50 @@
         console.log(sort_num)
 
         sortnum=[123,78,0,1,56,5,19]
-       sortnum.sort((a,b)=>a-b)
+        sortnum.sort((a,b)=>a-b)
         console.log(sortnum)
+    //revese
+        reverse_arr=[34,0,70,55,67,89]
+        console.log(reverse_arr.reverse())
+    //slice
+        let arr_slice=[1,2,3,5,6,7,8,9,11]
+        console.log(arr_slice.slice(3,5))
+        console.log(arr_slice.slice(7,9))
+
+        let str_slice=['apple','banana','kiwi','mango']
+        console.log(str_slice.slice(1,3))
+
+    //splice (add,delete(remove),replace)
+        //add
+        let fruits=['apple','banana','mango','grapes']
+        fruits.splice(2,0,'kiwi')
+        console.log(fruits)
+        fruits.splice(0,0,'pear','melon')
+        console.log(fruits)
+
+        //replace
+        let months=['jan','feb','apr','nov','oct']
+        months.splice(2,1,'mar')
+        console.log(months)
+        months.splice(3,1,'apr')
+        console.log(months)
+
+        //delete
+        let colors=['red','blue','orange','green','white']
+        colors.splice(3,1)
+        console.log(colors)
+    //class task
+        //sorting
+        function sortString(arr){
+            return arr.sort()
+        }
+        console.log(sortString(['banana','watermelon','kiwi','apple']))
+
+    //captalize
+        function captalizeLetter(str){
+            return str[0].toUpperCase()+str.slice(1)
+        }
+        console.log(captalizeLetter('hello'))
     </script>
 <body>
     <h3>Array Methods</h3>
@@ -71,5 +113,6 @@
         shift: Removes the first element from an array.</p>
     <p>The concat method creates a new array by combining multiple arrays or values.</p>
     <p>The sort() method sorts an array alphabetically.</p>
+    <p>Returns a shallow copy of a portion of an array.</p>
 </body>
 </html>

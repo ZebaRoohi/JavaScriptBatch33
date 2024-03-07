@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+//map method
+    let numbers=[1,2,3,4,5]
+    let result=numbers.map(num=>num*2)
+    console.log(result)
+
+    let str=['apple','banana','strawberry','cherry']
+    let str_res=str.map((fruit=>fruit.toUpperCase()))
+    console.log(str_res)
+
+    let num=[4,9,25,81]
+    let sq_root=num.map(sq=>Math.sqrt(sq))
+    console.log(sq_root)
+  //map object
+    const student=[
+        {
+            name:'John',
+            age:20,
+            grade:'A'
+        },
+        {
+            name:"Sam",
+            age:21,
+            grade:'B'
+        },
+        {
+            name:"Harry",
+            age:20,
+            grade:'C'
+        }
+    ]
+    let stu_res=student.map(stu=>({
+        name:stu.name,
+        grade:stu.grade
+    }))
+    console.log(stu_res)
+
+    //products
+    const products = [
+    { name: "sports car" },
+    { name: "laptop" },
+    { name: "phone" },
+    ];
+    
+    const product_res=products.map(product=>(
+        {
+            name:product.name,
+            product:product.price=100
+        }))
+    console.log(product_res)
+     
+    //area of cirlce 
+    const circle=[
+        {radius:2},{radius:4},{radius:6}
+    ]
+
+    const areacircle=circle.map(cir=>Math.PI*Math.pow(cir.radius,2))
+    console.log(areacircle)
+
+    //ForEach
+    const fruits=['apple','mango','kiwi']
+    fruits.forEach(fruit=>(
+        console.log(fruit)
+    ))
+
+    const students=[
+        {name:'John',age:23,grade:'A'},
+        {name:'Sam',age:23,grade:'B'},
+        {name:'Harry',age:20,grade:'C'}
+    ]
+
+    students.forEach(student=>{
+        grade:student.grade
+        console.log(students)
+     })
+
+     //sum of number
+     const arr=[1,3,4,5,6,7]
+     let sum=0
+     arr.forEach(num=>{
+        sum+=num
+        console.log('Sum of number is',sum)
+     })
+//Filter
+     let arr_filter=[1,3,4,5,6,7,8,10,12,13,33]
+     let filter_arr=arr_filter.filter(arr=>arr%2===0)
+     console.log(filter_arr)
+
+     let greater=[90,76,34,56,100]
+     let results=greater.filter(key=>key>=50)
+     console.log(results)
+
+     const str_fruits=['apple','banana','orange','kiwi','pear']
+     const fruits_filter=str_fruits.filter(fruit=>fruit.length<5)
+     console.log(fruits_filter)
+
+</script>
+<body>
+    <h3>Array Iteration Methods</h3>
+    <p>Map:It is used to iterate over all the elements in an array, which results in a new array</p>
+    <p>The forEach method in JavaScript is to iterate over elements in an array one by one, without creating a new array.</p>
+    <p></p>
+</body>
+</html>
