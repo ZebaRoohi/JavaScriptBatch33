@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .highlight{
+        color: red;
+        font-size: 40px;
+    }
+    .old-class{
+        color: green;
+        font-size: 14px;
+    }
+    .para_query{
+        color: blue;
+        font-weight: 600;
+        font-size: 20px;
+    }
+</style>
+<p id="demo">Hi there</p>
+<p id="demo2">Paragraph with style</p>
+<p id="display">This is example of display property</p>
+<div id="myDiv" style="background-color: green; height: 100px; width: 100px;">This is div box</div>
+<hr>
+
+<p class="content">Paragraph of getElementByClassName</p>
+<p class="content">Another paragraph of getElementByClassName</p>
+
+<div class="classDiv" style="background-color: aqua; height: 100px; width: 200px;"></div>
+<div class="classDiv" style="background-color: antiquewhite; height: 80px; width: 80px;"></div>
+<!-- tagname -->
+    <p>Paragraph1</p>
+    <p>Paragraph2</p>
+    <p>Paragraph3</p>
+
+    <div style="width: 100px; height: 100px;background-color: lightblue; border: 1px solid black;" ></div>
+    <div style="width: 100px; height: 100px;background-color: lightblue;border: 1px solid black;"></div>
+    <div style="width: 100px; height: 100px;background-color: lightblue;border: 1px solid black;"></div>
+    <button onclick="divColor()">Div Color</button>
+
+    <h1>Headin1</h1>
+    <h2>Heading2</h2>
+    <h3>Heading3</h3>
+    <button onclick="headingChange()">Change Heading</button>
+
+    <p class="old-class">First Para</p>
+    <p class="old-class">Second Para</p>
+    <p class="old-class-special">Third Para with extra class special</p>
+    <button onclick="removePara()">Remove para</button>
+
+<!-- Query Selector -->
+    <div id="queryDiv">This is a div tag of Query selector</div>
+    <p class="para_query">This is a paragraph of query selector</p>
+    <h6>Query selector example</h6>
+
+
+<script>
+//getElementById
+    document.getElementById('demo').innerText='Hello There this with DOm'
+    document.getElementById('demo2').style.backgroundColor='red'
+    document.getElementById('demo2').style.fontSize='30px'
+    document.getElementById('demo2').style.color='yellow'
+    document.getElementById('display').style.display='none'
+    function changeColor(){
+      var element=document.getElementById('myDiv');
+      element.style.backgroundColor='blue';
+      element.style.border='2px solid red'
+    }
+//ClassName
+    const para=document.getElementsByClassName('content')
+    for(let ele of para)
+    ele.innerText='Change text with classname'
+
+    function changeClass(){
+        const color=document.getElementsByClassName('classDiv');
+        for(const colors of color)
+        colors.style.backgroundColor='red';
+    }
+//tagName
+    // const tagName=document.getElementsByTagName('p')
+    // for(let para of tagName)
+    // para.innerText='New Paragraph Text'
+    
+    function divColor(){
+        const divs=document.getElementsByTagName('div')
+        for(div of divs)
+        div.style.backgroundColor='green'
+    }
+
+    function headingChange(){
+        const headings=document.getElementsByTagName('h2');
+        for(heading of headings)
+        heading.style.color='red'
+    }
+    //fn with classList method
+    /*function headingChange(){
+        const headings=document.getElementsByTagName('h2')
+        for(heading of headings)
+        heading.classList.add('highlight')
+    }*/
+    //classList Remove method
+    function removePara(){
+        const paragraphs=document.getElementsByTagName('p')
+        for(paragraph of paragraphs)
+        paragraph.classList.remove('old-class')
+    }
+
+//query selector
+       const div_query=document.querySelector('#queryDiv')
+       div_query.innerText='Text changed with Query selector'
+
+       const paraQuery=document.querySelector('.para_query')
+       paraQuery.style.color='green'
+
+       const heading_six=document.querySelector('h6')
+       heading_six.innerText='Changed Text'
+
+</script>
+
+    <hr>
+    <h3>DOM methods</h3>
+    <p>The DOM (Document Object Model) is a programming interface for web documents. It represents the structure of a document as a tree of objects, where each object corresponds to a part of the document, such as elements, attributes, and text content. JavaScript can manipulate the DOM dynamically, allowing you to update and interact with the content of a webpage.</p>
+    <p>1.getElementById method:getElementById is a JavaScript method that is used to select and retrieve an HTML element from the DOM (Document Object Model) based on its unique id attribute</p>
+    <button onclick="changeColor()">Click me</button>
+    <br>
+    <hr>
+    <p>getElementByClassName:The getElementsByClassName method in JavaScript allows you to select and manipulate HTML elements based on their class name.</p>
+    <button onclick="changeClass()">Class Change</button>
+    <hr><p>
+    The getElementsByTagName method in JavaScript allows you to select and manipulate HTML elements based on their tag name.</p>
+
+    <hr>
+    <p>In JavaScript, query selectors are methods that allow you to select HTML elements from the DOM (Document Object Model) based on various criteria</p>
+  
+ 
+</body>
+</html>

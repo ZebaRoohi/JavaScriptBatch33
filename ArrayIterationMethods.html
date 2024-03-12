@@ -101,11 +101,87 @@
      const fruits_filter=str_fruits.filter(fruit=>fruit.length<5)
      console.log(fruits_filter)
 
+     //object method of filter
+     const product=[
+        {id:1,name:'Laptop',price:1000},{id:2,name:'Mobile Phone',price:700},{id:3,name:'Tablet',price:500}
+     ]
+     const product_filtr=product.filter(pro=>pro.price>800)
+     console.log(product_filtr)
+     //grade A
+    const grade=[
+        {id:1,name:'harry',grade:'B'},{id:2,name:'John',grade:'A'},{id:1,name:'Sam',grade:'A'}
+    ]
+    const grade_fil=grade.filter(key=>key.grade==='A')
+    console.log(grade_fil)
+
+    const values=[1,null,4,6,7,undefined,8,10]
+    const val=values.filter(key=>key>0)
+    console.log(val)
+     //or
+    const val_fil=values.filter(key=>key!==null && key!==undefined)
+    console.log(val_fil)
+
+//Find 
+     const find_even=[1,3,4,5,6,7,9,8,10,12]
+     const even_find=find_even.find(even=>even%2==0)
+     console.log(even_find)
+
+     //arr
+     const find_fruits=['apple','banana','kiwi','pear','grapes']
+     const fruits_find=find_fruits.find(fruit=>fruit.length<5)
+     console.log(fruits_find)
+
+     const find_val=[23,45,3,10,9,100]
+     const val_find=find_val.find(key=>key<20)
+     console.log(val_find)
+
+//Some
+     const even_some=[1,3,5,7,9,6]
+     const some_even=even_some.some(key=>key%2==0)
+     console.log(some_even)
+
+     const fruits_some=['apple','banana','kiwi','pear','grapes']
+     const some_fruits=fruits_some.some(key=>key.length<5)
+     console.log(some_fruits)
+
+//reduce
+     const reduce_num=[1,2,3,4,5]
+     const num_reduce=reduce_num.reduce((acc,curr)=>acc+curr,0)
+     console.log(num_reduce)
+
+     const red_num=[1,2,3,4]
+     const num_red=red_num.reduce((acc,curr)=>acc*curr,1)
+     console.log(num_red)
+
+     const arr_red=[[1,2],[3,4],[5,6]]
+     const red_arr=arr_red.reduce((acc,curr)=>acc.concat(curr),[])
+     console.log(red_arr)
+
+//Filtering and Mapping Odd Numbers and double the element.
+     const num_odd=[1,2,3,4,5,6,7,8,9]
+     const odd_num=num_odd.filter(num=>num%2!==0)
+     .map(oddnum=>oddnum*oddnum)
+     console.log(odd_num)
+
+// Filtering and Mapping Products with a Certain Price and name
+     const product_filter=[
+        {id:1,name:'Laptop',price:1000},{id:2,name:'Phone',price:700},{id:3,name:'Tablet',price:500}
+     ]
+     const filter_product=product_filter.filter(product=>product.price<800)
+     console.log(filter_product)
+    const map_products=filter_product.map(product=>({
+        name:product.name,
+        price:product.price
+    }))
+    console.log(map_products)
 </script>
 <body>
     <h3>Array Iteration Methods</h3>
     <p>Map:It is used to iterate over all the elements in an array, which results in a new array</p>
     <p>The forEach method in JavaScript is to iterate over elements in an array one by one, without creating a new array.</p>
-    <p></p>
+    <p>The filter method in JavaScript is used to create a new array containing elements that pass a certain condition.</p>
+    <p>find:The find method in JavaScript is used to return the first element in an array that satisfies a given testing function. It stops execution once such an element is found, and it does not iterate over the entire array</p>
+    <p>The some method is used to check if at least one element in an array satisfies a given condition. It returns true if any element passes the test; otherwise, it returns false</p>
+    <p>The reduce method in JavaScript is used to reduce the elements of an array to a single value. It takes a callback function and an initial value.</p>
 </body>
 </html>
