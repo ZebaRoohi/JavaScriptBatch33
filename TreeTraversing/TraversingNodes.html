@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parentElement">
+        <p>First Child</p>
+        <span>Second Child</span>
+        <em>Last Child</em>
+    </div>
+</body>
+<script>
+    const elements=document.getElementById('parentElement')
+    const parent=elements.parentNode
+    console.log('Parent Node',parent)
+    
+    const child=elements.childNodes
+    console.log('Child Nodes',child) 
+
+    const first_child=elements.firstChild
+    console.log('First chid',first_child)
+
+    const last_child=elements.lastChild
+    console.log('Last child',last_child)
+
+    const next_siblings=elements.nextSibling
+    console.log('Next Siblings',next_siblings)
+
+    const prev_siblings=elements.previousSibling
+    console.log('Previous Sibling',prev_siblings)
+</script>
+</html>

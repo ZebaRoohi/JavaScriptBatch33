@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent">
+        <!-- comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div><br>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent=document.querySelector('.parent')
+    console.log('Parent elemet',parent)
+    console.log('Children nodes inside parent',parent.children)
+    console.log('Child elemets',parent.children[1])
+    console.log('Child elemets',parent.children[1].innerHTML)
+    parent.children[2].style.color='blue'
+
+    console.log('First child element',parent.firstElementChild.innerHTML)
+    console.log('Last child element',parent.lastElementChild)
+
+    const dayele=document.querySelector('.day')
+    console.log('Day element',dayele)
+    console.log('Parent elemet with child element',dayele.parentElement)
+    console.log('Sibling nodes',dayele.nextElementSibling)
+    console.log('Sibling nodes previous',dayele.previousElementSibling)
+    console.log('Nodes',parent.childNodes)
+
+
+</script>
+</html>

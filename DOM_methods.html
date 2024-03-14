@@ -19,6 +19,9 @@
         font-weight: 600;
         font-size: 20px;
     }
+    .selector{
+        background-color: yellow;
+    }
 </style>
 <p id="demo">Hi there</p>
 <p id="demo2">Paragraph with style</p>
@@ -56,7 +59,22 @@
     <p class="para_query">This is a paragraph of query selector</p>
     <h6>Query selector example</h6>
 
+<!-- queryselectorAll -->
+    <!-- <p>Paragraph1</p>
+    <p>Paragraph2</p>
+    <p>Paragraph3</p> -->
 
+    <img src="image1.png">
+    <img src="image2.png">
+    <img src="image3.png">
+
+    <form>
+        <input type="text" placeholder="enter your name"> <br>
+        <input type="password"placeholder='enter your password'>
+        <button type="submit">Submit</button>
+    </form>
+    <div class="selector">This is div of query selector</div>
+    <p class="selector">This is para of query selector</p>
 <script>
 //getElementById
     document.getElementById('demo').innerText='Hello There this with DOm'
@@ -118,6 +136,26 @@
        const heading_six=document.querySelector('h6')
        heading_six.innerText='Changed Text'
 
+//queryselectoraLL
+    // const para_selector=document.querySelectorAll('p')
+    // para_selector.forEach(para=>{
+    //     para.style.color='red'
+    // })
+
+    const images=document.querySelectorAll('img')
+    images.forEach(img=>{
+        img.style.border='2px solid green';
+    })
+
+    const input_feilds=document.querySelectorAll('input')
+    input_feilds.forEach(input=>{
+        input.style.marginTop='30px'
+    })
+
+    const selectors=document.querySelectorAll('.selector')
+    selectors.forEach(selctor=>{
+        selctor.style.fontSize='30px'
+    })
 </script>
 
     <hr>
@@ -131,9 +169,8 @@
     <button onclick="changeClass()">Class Change</button>
     <hr><p>
     The getElementsByTagName method in JavaScript allows you to select and manipulate HTML elements based on their tag name.</p>
-
     <hr>
-    <p>In JavaScript, query selectors are methods that allow you to select HTML elements from the DOM (Document Object Model) based on various criteria</p>
+    <p>In JavaScript, query selectors are methods that allow you to select HTML elements from the DOM (Document Object Model) based on various criteria(id,class,tagnames)</p>
   
  
 </body>
