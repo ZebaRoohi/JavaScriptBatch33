@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="pageLoad()">
+    <h3>Example of Eventts</h3>
+    <p>1.Mouse Events</p>
+    <button onclick="onClick()" >Click Me</button>
+    <div id="mouseevent" style="padding: 10px; margin: 10px; border: 1px solid black;" onmouseover="onMouseOver()" onmouseout="onMouseOut()">Move your mouse on it</div>
+
+    <p id="mousemove" style="padding: 10px; margin: 10px; border: 1px solid red;" onmousemove="onMouseMove()">This is mouse move event</p>
+
+    <p>2.Keyboard Events</p>
+    <input type="text" id="input" placeholder="Type something..." onkeydown="onKeydown()" />
+    
+    <input type="text" id="input1" placeholder="Type something..." onkeyup="onKeyup()" />
+
+    <p>3.Form Events</p>
+    <input type="text" id="focus" placeholder="Type something..." onfocus="onFocus()" /><br>
+
+    <form onsubmit="onSubmit()">
+    <input type="text" placeholder="Enter your name" />
+    <button>Submit</button>
+    </form>
+
+    <select  onchange="onChange()">
+    <option value="option1">Option1</option>
+    <option value="option2">Option2</option>
+    </select>
+
+    <input type="text" id="blur" onblur="onBlur()" placeholder="Type something...">
+
+</body>
+<script>
+    function onClick(){
+        alert('You clicked the button of mouseonclick')
+        console.log('buttonclicked')
+    }
+    function onMouseOver(){
+        console.log('You just over on the mouse')
+        document.getElementById('mousemove').style.backgroundColor='green'
+    }
+    function onMouseOut(){
+        console.log('You just leave the mouse')
+    }
+    function onMouseMove(){
+    console.log('You moved on the paragraph')
+    }
+//2.key events
+    function onKeydown(){
+        document.getElementById('input')
+        // alert('Pressed a key')
+        console.log('Pressed a key')
+    }
+
+    function onKeyup(){
+    document.getElementById('input1')
+    alert('Your press a key')    
+    }
+
+//3.Form events
+    function onFocus(){
+        document.getElementById('focus').style.backgroundColor='aqua'
+    }
+    function onSubmit(){
+        alert('Form submitted successfully')
+    }
+    function onChange(){
+        console.log('Selection change')
+    }
+    function onBlur(){
+        console.log('You lost the focus')
+    }
+
+//4.onload
+    function pageLoad(){
+        alert('Page is loading.....')
+    }
+</script>
+</html>
