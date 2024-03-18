@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #myElement{
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+    }
+</style>
+<body>
+    <h3>Add Event Listeners Methods</h3>
+    <p>Def:the addEventListener method is used to attach an event handler to a specified element. An event handler is a function that will be executed when a specific event occurs on the element, such as a click, mouseover, or keypress.</p>
+    <!-- mousevents -->
+    <button id="mybtn">Click button</button>
+    <div id="myElement"></div>
+    <p id="doubleClick">Please double click and see console</p>
+<!-- 
+keyboard -->
+    <p>Please click any key</p>
+    <input type="text" id="keyboard">
+
+<!-- form -->
+    <input type="text" id="change" placeholder="Enter text to see change effect">
+</body>
+<script>
+//mouse events
+    document.getElementById('mybtn').addEventListener('click',()=>{
+        alert('You clicked the button')
+    })
+
+    document.getElementById('myElement').addEventListener('mouseover',()=>{
+        document.getElementById('myElement').style.backgroundColor='green'
+    })
+
+    document.getElementById('myElement').addEventListener('mouseout',function(){
+        document.getElementById('myElement').style.backgroundColor='black'
+    })
+
+    document.getElementById("doubleClick").addEventListener("dblclick", myFunction);
+
+    function myFunction() {
+    document.getElementById("doubleClick").innerHTML = "I was double-clicked!";
+    }
+       
+//keyboard events
+        document.addEventListener('keyup',(event)=>{
+            console.log('You pressed',event.key)
+        })
+        document.addEventListener('keydown',(event)=>{
+            console.log('You presed',event.key)
+        })
+
+    document.getElementById('keyboard').addEventListener('keyup',()=>{
+            document.getElementById('keyboard').style.backgroundColor='red'
+        })
+//form
+        let text=document.getElementById('change')
+        text.addEventListener('change',()=>{
+            text.style.color='red'
+        })
+    
+</script>
+</html>
