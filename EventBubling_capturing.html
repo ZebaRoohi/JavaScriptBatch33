@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    li{
+        padding: 5px;
+        margin: 5px;
+        cursor: pointer;
+        background: #ccc;
+    }
+</style>
+<body>
+    <h3>Event bubbling,capturing</h3>
+    <p>Event Bubbling:In the event bubbling phase, the event starts from the target element that triggered the event and bubbles up through its ancestors in the DOM hierarchy.</p>
+    <div id="outerBubble">
+        <p id="innerBubble">Click me to see Event Bubbling</p>
+    </div>
+    <p>Event Capturing:In the event capturing phase, the event starts from the top-level ancestor and trickles down to the target element that triggered the event.</p>
+  
+    <div id="outerCapture">
+        <p id="innerCapture">Click me to see Event Capture</p>
+    </div>
+ 
+    <p>Event delegation is a technique in JavaScript where a single event listener is placed on a common ancestor (usually a parent) of multiple elements, and it leverages event bubbling to handle events for all the child elements</p>
+
+  <ul id="parentList">
+    <li>Item1</li>
+    <li>Item2</li>
+    <li>Item3</li>
+    <li>Item4</li>
+    <li>Item5</li>
+  </ul>
+</body>
+<script>
+//Event Bubble
+    document.getElementById('outerBubble').addEventListener('click',()=>{
+        alert('outer element is clicked')
+    })
+    document.getElementById('innerBubble').addEventListener('click',()=>{
+        alert('inner element is clicked')
+    })
+//Event Capture
+    document.getElementById('outerCapture').addEventListener('click',()=>{
+        alert('outer function clicked')
+    },true)
+    document.getElementById('innerCapture').addEventListener('click',()=>{
+        alert('inner function clicked')
+    },true)
+
+//Event Delegation
+    document.getElementById('parentList').addEventListener('click',(event)=>{
+        if(event.target.tagName==='LI'){
+            alert('You clicked on' +event.target.textContent)
+        }
+    })
+
+</script>
+</html>
