@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Set Time out and Set Time Interval</h3>
+    <p>setTimeout executes a function or evaluates an expression after a specified delay (in milliseconds).</p>
+
+
+    <p>setInterval executes a function or evaluates an expression repeatedly at a specified interval (in milliseconds).</p>
+</body>
+<script>
+    //setTimeOut
+     /*setTimeout(function(){
+        console.log('Print message after delay of 3 seconds ')
+     },3000)
+
+     setTimeout(function(name){
+        console.log('Hi'+ name + 'Good Morning !')
+     },2000,'John')
+
+     setTimeout(()=>{
+        console.log('Printing message with arrow function at 1 sec')
+     },1000)*/
+
+    //setTimeInterval
+    let intervalId=setInterval(function(){
+        console.log('Print this message after every 3 secods')
+    },3000)
+
+    let intervalPara=setInterval(function(name){
+        console.log('Hi' +name +'Print after 2 seconds')
+    },2000,'John')
+
+    let counter=0
+    let intervalCounter=setInterval(function(){
+        console.log('Interval is'+counter++)
+        if(counter===5){
+            clearInterval(intervalCounter)
+        }
+    },1000)
+
+
+</script>
+</html>

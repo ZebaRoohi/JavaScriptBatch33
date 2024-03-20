@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>RegEx</h3>
+</body>
+<script>
+    let text='This is an example of regular expresssion'
+    let pattern=/t/g
+    console.log('Global search',text.match(pattern))
+
+    //case insensitive
+    let pattern1=/t/gi
+    console.log('Global search case sensitive',text.match(pattern1))
+
+    //modifier
+    let modifier=`Is this
+        all there
+        is`
+
+    let modifier_pattern=/^is/mi
+    console.log(modifier.match(modifier_pattern))
+
+//2.Regular Expression Bracket
+    let str='a123c gh908 xy578bu'
+    let bracket=/[ac]/g //dispay braket result
+    console.log(str.match(bracket))
+
+    let bracket1=/[^abc]/g
+    console.log(str.match(bracket1))
+
+    let bracket_num=/[0-9]/g
+    console.log(str.match(bracket_num))
+
+    let bracket_num1=/[^0-9]/g
+    console.log(str.match(bracket_num1))
+
+    let x_y=/[xy|gh]/g
+    console.log(str.match(x_y))
+
+//3.Regular Ex with metaCharacter
+    let meta='There are 8 planets in the solar system'
+    let words=/\w+/g
+    console.log(meta.match(words))
+
+    let non_words=/\W+/g
+    console.log(meta.match(non_words))
+
+    let digit=/\d+/g
+    console.log(meta.match(digit)) 
+
+    let non_digit=/\D+/g
+    console.log(meta.match(non_digit))
+
+    let space=/\s+/g
+    console.log(meta.match(space))
+
+    let white_space=/\S+/g
+    console.log(meta.match(white_space))
+
+//4.RegExp with Object Methods
+    let str1='Welcome to RegEx in Javascript'
+    let res_exec=/e/.exec(str1) //match string and stops after getting o/p
+    console.log(res_exec)
+
+    let res_test=/z/.test(str1) //return result in true or false
+    console.log(res_test)
+
+</script>
+</html>
