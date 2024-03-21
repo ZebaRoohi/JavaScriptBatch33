@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h3>Example of notifications </h3>
+</body>
+<div id="notifications"></div> 
+<script>
+    function createNotification(message){
+    const notification=document.createElement('div')
+    notification.textContent=message
+
+    //add the notification on screen
+    document.getElementById('notifications').appendChild(notification)
+    
+    setTimeout(()=>{
+        notification.remove()
+    },4000)
+    }
+    createNotification('first notification message')
+    setTimeout(()=>{
+        createNotification('display every 2 seconds')
+    },2000)
+    
+</script>
+</html>
