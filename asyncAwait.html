@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Async Await Operation</h3>
+</body>
+<script>
+//basic syntax
+    async function asynOperation(){
+        return 'Async operation is completed'
+    }
+    async function performTask(){
+        const result=await asynOperation()
+        console.log('result',result)
+    }
+    performTask()
+
+//promise with async/await
+    function asyncOperation(){
+        return new Promise(resolve=>{
+            setTimeout(()=>resolve('Async opetation is completed'))
+        },1000)
+    }
+    async function performTask(){
+        const result=await asyncOperation()
+        console.log(result,'result with promise')
+    }
+    performTask()
+</script>
+</html>

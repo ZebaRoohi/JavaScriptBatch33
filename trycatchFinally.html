@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Try Catch Finally</h3>
+</body>
+<script>
+    let a=100;
+    let b=0;
+    function myfun(){
+    try{
+        if(b==0){
+            throw ('Cannot divided by zero')
+        }else{
+            let c=a/b;
+            console.log(c)
+        }
+    }catch(err){
+        console.log('Error  is',err)
+    }
+    }
+</script>
+<p>Click the button to see try and catch</p>
+<button type="button" onclick="myfun()">Click</button>
+</html>

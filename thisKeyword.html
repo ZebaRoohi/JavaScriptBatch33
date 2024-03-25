@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>This keyword</h3>
+</body>
+<script>
+     function exampleOfThis(){
+        console.log(this) //return window object
+     }
+     exampleOfThis()
+
+     //arrow function
+     const arrowExample=()=>{
+        console.log(this)
+     }
+     arrowExample()
+
+     //object 
+     const person={
+        name:'John',
+        age:23,
+         sayHello:function(){
+            console.log(`Name of the person is ${this.name} ${this.age}`)
+         }
+     }
+    person.sayHello()
+</script>
+</html>

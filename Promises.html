@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Promises</h3>
+    <p>Promises in JavaScript are a powerful tool for handling asynchronous operations. A Promise represents the eventual completion or failure of an asynchronous operation, and its resulting value</p>
+</body>
+<script>
+//Basic syntax
+    let count=true;
+    const myPromise=new Promise((resolve,reject)=>{
+        if(count){
+            resolve('Your condition is resolved')
+        }else{
+            reject('Your condition is rejected')
+        }
+
+    })
+    console.log(myPromise)
+//Asynchronous
+    const my_promise=new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            let success=true;
+            if(success){
+                resolve('Your condition is successful')
+            }else{
+                reject('Your condition is unsuccessful')
+            }
+        },200)
+    })
+   //promise chaining
+   my_promise
+   .then((res)=>console.log(res))
+   .catch((err)=>console.log(err)) 
+
+// //3.
+    const result=false
+    const promise1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        if(result){
+        resolve('foo');
+        }else{
+            reject('oof')
+        }
+    }, 300);
+    });
+
+    promise1
+    .then((res)=>console.log(res))
+    .catch((e)=>console.log(e))
+
+
+//promise race
+    const promise_race1=new Promise((res,rej)=>{
+        setTimeout(()=>{
+            res('Promise 1 is resolve')
+        },300)
+    })
+
+    const promise_race2=new Promise((res,rej)=>{
+        setTimeout(()=>{
+            res('Promise 2 is resolve')
+        },100)
+    })
+    const promise_race3=new Promise((res,rej)=>{
+        setTimeout(()=>{
+            rej('Promise 3 is rejected')
+        },200)
+    })
+    Promise.race([promise_race1,promise_race2,promise_race3])
+    .then(res=>console.log('First with less time is winner',res))
+    .catch(err=>console.log(err))
+
+// //promise all
+    const promise_all1=new Promise((res,rej)=>{
+        setTimeout(()=>{
+            res('Promise 1 all is resolve')
+        },100)
+    })
+    const promise_all12=new Promise((res,rej)=>{
+        setTimeout(()=>{
+            res('Promise 2 all is resolve')
+        },150)
+    })
+    const promise_all3=new Promise((res,rej)=>{
+        setTimeout(()=>{
+            res('Promise 3 all is resolve')
+        },200)
+    })
+
+    Promise.all([promise_all1,promise_all12,promise_all3])
+    .then(res=>console.log(res))
+    .catch(err=>console.log(err))
+
+//promise any it prints reslve value
+    const promiseA=new Promise((res,rej)=>{
+        setTimeout(()=>{
+            rej('Promise A is rejected')
+        },100)
+    })
+    const promiseB=new Promise(res=>{
+        setTimeout(()=>{
+            res('Promse B is resolved')
+        },200)
+    })
+    const promiseC=new Promise(res=>{
+        setTimeout(()=>{
+            res('Promse C is resolved')
+        },150)
+    })
+    Promise.any([promiseA,promiseB,promiseC])
+    .then(res=>console.log(res))
+    .catch(err=>console.log(err))
+
+</script>
+</html>

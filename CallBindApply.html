@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Call,Bind,and Apply in JS</h3>
+</body>
+<script>
+//Call method
+    let person1={
+        firstName:'John',
+        secondName:'Doe'
+    }
+    let person2={
+        firstName:'Harry',
+        secondName:'Smith'
+    }
+    let person={
+        fullName:function(){
+            console.log(this.firstName +" "+this.secondName)
+        }
+    }
+    person.fullName.call(person2)
+
+//Bind
+    let person_bind={
+        name:'John',
+        greet:function(){
+            console.log(`Hello,${this.name}`)
+        }
+    }
+    const greet_person=person_bind.greet.bind(person_bind)
+    greet_person()
+
+//Apply 
+    let person_apply={
+        name:'Peter'
+    }
+    function greet_apply(message){
+        console.log(message +" " +this.name)
+    }
+    greet_apply.apply(person_apply,['Good Afternoon'])
+</script>
+</html>
