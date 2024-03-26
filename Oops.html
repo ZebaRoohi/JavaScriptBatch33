@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Example of Oops</h2>
+</body>
+<script>
+//class
+    class Animal{
+        constructor(name){
+            this.name=name
+        }
+        speak(){
+            console.log(`${this.name} speaks loudly`)
+        }
+    }
+    let a=new Animal('Lion')
+    a.speak()
+//book(title,author)
+    class Book{
+        constructor(title,author){
+            this.title=title
+            this.author=author
+        }
+        display(){
+            console.log(`The book title is ${this.title} and the book author is ${this.author}`)
+        }
+    }
+    let mybook=new Book('abc','xyz')
+    mybook.display()
+
+//2.Object
+    let person={
+        fname:'John',
+        lname:'Doe',
+        age:30,
+        greet:function(){
+            console.log(`Hello my name is ${this.fname} ${this.lname} and my age is ${this.age}` )
+        }
+    }
+    person.greet()
+
+//3.Constructor
+    class Person{
+        constructor(name,age){
+            this.name=name
+            this.age=age
+        }
+        display(){
+            console.log(`Hello my name is ${this.name} and my age is ${this.age}`)
+        }
+    }
+    let person1=new Person('John',20)
+    person1.display()
+
+    let person2=new Person('Harry',23)
+    person2.display()
+
+    //area of rectangle
+    class Rectangle{
+        constructor(l,b){
+            this.l=l;
+            this.b=b;
+        }
+        areaofRectangle(){
+            return `Area of rectangle is ${this.l*this.b}`
+        }
+    }
+    let rect=new Rectangle(5,3)
+    console.log(rect.areaofRectangle())
+
+//4.Inheritance
+    class Animala{
+        constructor(name){
+            this.name=name
+        }
+        speak(){
+            console.log(`${this.name} speaks loudly`)
+        }
+    }
+    class Dog extends Animala{
+        constructor(name,breed){
+            super(name) //calling the basecall
+            {
+                this.breed=breed
+            }
+        }
+        bark(){
+            console.log(`Name of the dog is ${this.name} and the breed is ${this.breed}`)
+        }
+        
+    }
+    let dog=new Dog('abc','xyz')
+    dog.speak()
+    dog.bark()
+
+    class Person1{
+        constructor(name,age){
+            this.name=name
+            this.age=age
+        }
+        display(){
+            console.log(`Hello name of person is ${this.name} and age is ${this.age}`)
+        }
+    }
+    class College extends Person1{
+        constructor(name,age,course,sports,address){
+            super(name,age)
+            {
+                this.course=course;
+                this.sports=sports;
+                this.address=address
+            }
+        }
+        getDetails(){
+            console.log(`${this.name} and  ${this.age} and course ${this.course} and ${this.sports}`)
+        }
+        getAddress(){
+            console.log(`Adress is ${this.address}`)
+        }
+    }
+    let details=new College('Deepak',23,'cse','cricket','telengana')
+    details.getDetails()
+    details.getAddress()
+    details.display()
+
+//5.Polymorphism
+    class Shape{
+        draw(){
+            console.log('Drawing a shape')
+        }
+    }
+    class Rectanglea extends Shape{
+        draw(){
+            console.log('Drawing a rectangle')
+        }
+    }
+    class Circle extends Shape{
+        draw(){
+            console.log('Drawing a cirlce')
+        }
+    }
+    function drawShape(shape){
+        shape.draw()
+    }
+
+    let circle=new Circle()
+    drawShape(circle)
+    let recta=new Rectanglea()
+    drawShape(recta)
+</script>
+</html>
