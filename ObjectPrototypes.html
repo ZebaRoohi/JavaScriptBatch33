@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Object Prototype:allow objects to inherit properties and methods from other objects.</p>
+    <p>The hasOwnProperty() method checks whether or not an object’s property belongs to the indicated object. If the property belongs to the named object, it returns true else false.</p>
+    <p>The Object.keys method returns an array of a given object's own enumerable property name(returns keys)</p>
+    <p>The Object.setPrototypeOf method sets the prototype of a specified object to another object or null.</p>
+    <p>Object.freeze() is a method in JavaScript that is used to freeze an object, making it immutable.(cannot chnage)</p>
+</body>
+<script>
+//Basic syntax of prototype
+    function person(name,city,dob){
+        //intializing the obj
+        this.name=name
+        this.city=city
+        this.dob=dob
+    }
+   // console.log(person.prototype)
+   person.prototype.display=function(){
+    return `Age of the person is ${this.name} ${this.city} ${this.dob}`
+   }
+    const person1=new person('John','Tel',23) //new keyword creates new obj
+    console.log(person1)
+    console.log(person1.display())
+
+//displaying props of vehicle with prototype
+    function Vehicle(name,color){
+        this.name=name
+        this.color=color
+    }
+    Vehicle.prototype.features=function(){
+        console.log(`Vehicle name is ${this.name} ${this.color}`)
+    }
+    const vhcl=new Vehicle('honda','red')
+    console.log(vhcl)
+
+//1.hasOwnProperty
+    let Person={
+        name:'John',
+        age:23,
+        address:'Tel'
+    }
+    console.log(Person.hasOwnProperty('name')) //boolean values
+    console.log(Person.hasOwnProperty('age'))
+    console.log(Person.hasOwnProperty('status'))
+
+    //protype chaining
+    function vehicle(name,color){
+        this.name=name
+        this.color=color
+    }
+    vehicle.prototype.milage=230;
+    const v=new vehicle('bmw','grey')
+    console.log(v.hasOwnProperty('name'))
+    console.log(v.hasOwnProperty('milage'))
+
+//2.Obect.keys()
+    const colors=['red','green','blue']
+    console.log(Object.keys(colors))
+  
+    let car={
+        brand:'toyota',
+        model:'1235',
+        year:2022
+    }
+    console.log(Object.keys(car))
+    console.log(Object.keys(car).includes('year'))//boolean
+
+//3.Object.setPrototypeOf()
+    let cars={
+        brand:'bmw'
+    }
+    let bike={
+        name:'fz'
+    }
+    console.log(Object.setPrototypeOf(bike,cars))
+    console.log(bike.brand)
+    console.log(bike.name)
+//4.Object.freeze()
+    let numbers=[1,2,3]
+    Object.freeze(numbers)
+    //numbers.push(4)
+    console.log(numbers)
+    numbers[0]=0
+    console.log(numbers)
+
+    //obj
+    let obj={
+        name:'Harry',
+        age:40
+    }
+    Object.freeze(obj)
+    obj.age=30
+    console.log(obj)
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Sets</h3>
+    <p>Set object in JavaScript, it's a built-in object that allows you to store unique values of any type. </p>
+</body>
+<script>
+    let numbers=new Set()
+    numbers.add(2)
+    numbers.add(1)
+    numbers.add(3)
+    console.log(numbers)
+    numbers.add(4)
+    numbers.delete(1)
+    console.log(numbers.has(1))//boolean values
+    numbers.add(4)//cannot accept duplicate values
+    console.log(numbers)
+</script>
+</html>
