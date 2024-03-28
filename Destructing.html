@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Destructing objects and array</h3>
+    <p>Destructing in javascript basically means the breaking down of a complex structure(Objects or arrays) into simpler parts. With the destructing assignment, we can ‘unpack’ array objects into a bunch of variables.</p>
+</body>
+<script>
+//array destructure
+    let numbers=[1,2,3]
+    let[a,b,c]=numbers
+    console.log(a)
+    console.log(b)
+    console.log(c)
+//object
+    const person={
+        name:'John',
+        age:20
+    }
+    const{name,age}=person
+   
+//funtion
+    function personInfo({name,age}){
+        console.log(`${name} ${age} years old`)
+    }
+    const details={name:'Harry', age:23}
+    personInfo(details)
+</script>
+</html>

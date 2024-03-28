@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Hoisting</h3>
+    <p>Hoisting is a JavaScript behavior where variable and function declarations are moved to the top of their containing scope during the compilation phase. It's important to note that only the declarations are hoisted, not the initializations.</p>
+</body>
+<script>
+ //Hoisting
+     console.log(a) //undefined
+    var a=5
+    console.log(a)
+
+    /*console.log(b)//Uncaught ReferenceError: Cannot access 'b' before initialization
+    let b=10
+    console.log(b)*/
+
+   /* console.log(c)//Hoisting.html:59  Uncaught ReferenceError: Cannot access 'c' before initialization
+    const c=15
+    console.log(c)*/
+
+//Hoisting with functions
+
+/*functionLet() //Hoisting.html:65  Uncaught ReferenceError: Cannot access 'functionLet' b
+    let functionLet=function(){
+        console.log('Hoisitng LET with function')
+    }
+    functionLet()*/
+
+    /*functionConst()
+    const functionConst=function(){
+        console.log('Hoisting CONST with function')
+    }
+    functionConst()*/
+
+    functionVar()
+    var functionVar=function(){
+        console.log('Hosiiting with VAR function')
+    }
+    functionVar()
+</script>
+</html>
