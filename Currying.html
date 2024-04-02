@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Example of Curring</h3>
+    <p>Currying in JavaScript is a process in functional programming in which you can transform a function with multiple arguments into a sequence of nesting functions.</p>
+</body>
+<script>
+    function VolumeCube(length){
+        return function(breadth){
+            return function(height){
+                return length*breadth*height
+            }
+        }
+    }
+    console.log(VolumeCube(2)(3)(4))
+</script>
+</html>

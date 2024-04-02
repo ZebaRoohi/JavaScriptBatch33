@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Rest and Spread Operators</h3>
+    <p>The rest parameter allows you to represent an indefinite number of arguments as an array.</p>
+    <p>The spread operator is used to expand elements of an array or properties of an object.</p>
+</body>
+<script>
+    const[first,second,third,...others]=[1,2,3,4,5,6,7,8,9,10]
+    console.log('fist',first)
+    console.log('second',second)
+    console.log('third',third)
+    console.log('others',others)
+
+//object
+    const{a,b,c,...rest}={a:1,b:2,c:3,d:4,e:5}
+    console.log('a',a)
+    console.log('b',b)
+    console.log('c',c)
+    console.log('rest',rest)
+
+//function
+    function greet(...names){
+        console.log('Hello'+names.join(','))
+    }
+    greet('John','Harry','Peter','Sam')
+
+//Spread operatot
+    //array
+    const num1=[1,2,3]
+    const num2=[4,5,6]
+    const combinedArray=[...num1,...num2]
+    console.log(combinedArray)
+
+//object
+    const values={a:1,b:2,c:3}
+    const person={name:'John',age:23,address:'Tel'}
+    const combineObj={...values,...person}
+    console.log(combineObj)
+
+//function
+    function multiply(a,b,c){
+        return a*b*c
+    }
+    const numbers=[2,3,4]
+    console.log(multiply(...numbers))
+</script>
+</html>

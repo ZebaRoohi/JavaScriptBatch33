@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Shallow and deep copy</h3>
+    <p>In JavaScript, there are two ways to copy objects: shallow copy and deep copy. Shallow copying creates a new object with references to the same memory locations as the original object, while deep copying creates a new object with new memory locations for all of its properties and nested objects or arrays.</p>
+</body>
+<script>
+    let person={
+    pid:'101',
+    pname:'John',
+    age:23,
+    paddress:'Telengana'
+}
+console.log("Person=>",person)//1
+let newPerson=person
+console.log("New Person=>",newPerson)//2
+
+console.log('====After Modification======')
+newPerson.pname='Harry'
+newPerson.age=30
+console.log("After Modification Person=>",person)
+console.log('Afetr Modification New person=>',newPerson) //Shallow copy
+
+//Deep copy
+let car={
+    cid:'C1001',
+    brand:'Toyota',
+    cname:'Xyz',
+    model:2020
+
+}
+
+console.log('----Deep Copy----')
+console.log('Car details=>',car) //1
+
+let newCar=JSON.parse(JSON.stringify(car))//deepcopy
+console.log('New car details=>',newCar) //2
+
+console.log('----After modification----')
+newCar.brand='Honda'
+newCar.model=2022
+
+console.log('After modifaction car=>',car)
+console.log('After modification newCar=>',newCar)
+</script>
+</html>
